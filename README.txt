@@ -1,5 +1,5 @@
 
-Este script tem a função de realizar o envio de vários pacotes a fim de desautenticação de todos os clientes de um ponto de rede sem fio
+Este script tem a função de realizar o envio de vários pacotes a fim de desautenticar todos os clientes de um ponto de rede sem fio
 
 MDK3 e AIRCRACK-NG são necessários!
 
