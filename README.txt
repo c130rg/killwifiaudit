@@ -1,9 +1,18 @@
 
-ATENÇÃO: ESSE SCRIPT TEM A FUNÇÃO DE TESTAR A ESTABILIDADE DE REDES SEM FIO
-NÃO TESTE SEM AUTORIZAÇÃO! RESPEITE AS LEGISLAÇÕES!
-O AUTOR NÃO SE RESPONSÁBILIZA POR DANOS CAUSADOS
+Este script tem a função de realizar o envio de vários pacotes a fim de desautenticação de todos os clientes de um ponto de rede sem fio
 
-Python 2.7
 MDK3 e AIRCRACK-NG são necessários!
 
-Em breve melhorias e explicação do funcionamento.
+Como usar:
+
+python3 wifikillaudit.py
+
+Selecione a sua placa de rede sem fio que vai escutar as outras redes e efetuar o envio
+
+Escolha o alvo e o canal
+
+Pare o processo com CRTL+C
+
+ATENÇÃO:
+NÃO TESTE SEM AUTORIZAÇÃO! RESPEITE AS LEGISLAÇÕES!
+O AUTOR NÃO SE RESPONSÁBILIZA POR DANOS CAUSADOS. USO SOMENTE PARA AUDITÓRIA E TESTE DE ESTABILIDADE DE REDES SEM FIO.
